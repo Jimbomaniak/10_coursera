@@ -6,7 +6,7 @@ Run in console `pip install -r requirements.txt` to install 3rd party modules.
 
 ---
 
-Script uses coursera xml feed to find courses and save info about 20 random courses into Excel file.
+Script uses coursera xml feed to find courses and save info about 20 random courses into Excel file in script folder.
 
 ###How to use:
 
