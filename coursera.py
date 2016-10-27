@@ -29,9 +29,7 @@ def get_course_info(course_url):
     info = tree.xpath('string(//script[@type="application/ld+json"])')
     dates = re.search(r'(\d{4}.\d{2}.\d{2})', info)
     start_date = dates and dates.group() or 'No specific dates'
-    table_with_info = tree.xpath('//tr/td/span/text()')
-    language_index = table_with_info.index('Language') + 1
-    language = table_with_info[language_index]
+    language = tree.xpath('//tr/td/div[@class="language-info"]/text()')[0]
     avarage_rating = tree.xpath('//div[@class="ratings-text bt3-hidden-xs"]/text()')
     return {
         'title': title,
